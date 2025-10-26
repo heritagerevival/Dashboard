@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
     const onFinish = async (values: { email: string; password: string }) => {
         setLoading(true);
         try {
-            const res = await fetch("/api/members/login", {
+            const res = await fetch("https://api.heritagerevival.co.uk/api/members/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values),
