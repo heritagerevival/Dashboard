@@ -53,7 +53,7 @@ const PersonalDetailsSection: React.FC<PersonalDetailsSectionProps> = ({ country
                                 validator: async (_, value) => {
                                     if (!value) return Promise.resolve();
                                     try {
-                                        const res = await axios.get(`/api/members?email=${encodeURIComponent(value)}`);
+                                        const res = await axios.get(`https://api.heritagerevival.co.uk/api/members?email=${encodeURIComponent(value)}`);
                                         if (Array.isArray(res.data) && res.data.length > 0) {
                                             return Promise.reject(new Error('This email is already registered.'));
                                         }
