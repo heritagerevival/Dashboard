@@ -9,7 +9,7 @@ const OurMembersPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/members')
+    fetch('https://api.heritagerevival.co.uk/api/members')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch members');
