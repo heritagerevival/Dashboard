@@ -130,7 +130,7 @@ const HeritageDashboard: React.FC = () => {
             }
 
             // Send JSON with base64 image
-            const response = await fetch('http://127.0.0.1:5000/api/members', {
+            const response = await fetch('https://api.heritagerevival.co.uk/api/members', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(mergedValues),
