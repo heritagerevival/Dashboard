@@ -16,7 +16,7 @@ const MemberCard: React.FC<MemberCardProps> = ({ member }) => {
     if (member.profileImage.startsWith('data:image/')) {
       imageSrc = member.profileImage;
     } else if (member.profileImage.startsWith('/uploads/')) {
-      imageSrc = `http://localhost:5000${member.profileImage}`;
+      imageSrc = `https://api.heritagerevival.co.uk${member.profileImage}`;
     } else {
       imageSrc = member.profileImage;
     }
