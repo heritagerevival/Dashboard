@@ -27,7 +27,7 @@ const DetailPage: React.FC = () => {
   const onFinish = async (values: any) => {
     try {
       // Update user details except email
-      const res = await fetch(`/api/members/${user.id}`, {
+      const res = await fetch(`https://api.heritagerevival.co.uk/api/members/${user.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...values, email: user.email }),
